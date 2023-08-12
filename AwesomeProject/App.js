@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationRouting } from "./src/Components/NavigationRouting/NavigationRouting";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app Modyl 2!</Text>
+      <NavigationRouting />
       <StatusBar style="auto" />
     </View>
   );
