@@ -1,5 +1,13 @@
 import { StyleSheet } from "react-native";
 
+export const formwrapWithoutKeyboard = [
+    { paddingBottom: 66 },
+  ];
+
+export const formwrapForKeyboard = [
+    { paddingBottom: 0 },
+  ];
+
 export const defaultStyles = StyleSheet.create({
   container: {
     flex: 1,
@@ -9,7 +17,6 @@ export const defaultStyles = StyleSheet.create({
   formwrap: {
     paddingHorizontal: 16,
     paddingTop: 92,
-    paddingBottom: 66,
     backgroundColor: "#FFFFFF",
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
@@ -98,5 +105,23 @@ export const defaultStyles = StyleSheet.create({
 
   underlineText: {
     textDecorationLine: "underline",
+  },
+
+  inputForPassword: {
+    height: 50,
+    padding: 16,
+    borderWidth: 1,
+    borderRadius: 8,
+    
+    fontSize: 16,
+    lineHeight: 19,
+  },
+
+  inputHidden: {
+    height: 40,
+    borderWidth: 0,
+    borderRadius: 0,
+    
+    fontSize: 16,
   },
 });
