@@ -1,12 +1,8 @@
 import { StyleSheet } from "react-native";
 
-export const formwrapWithoutKeyboard = [
-    { paddingBottom: 66 },
-  ];
+export const formwrapWithoutKeyboard = [{ paddingBottom: 66 }];
 
-export const formwrapForKeyboard = [
-    { paddingBottom: 0 },
-  ];
+export const formwrapForKeyboard = [{ paddingBottom: 0 }];
 
 export const defaultStyles = StyleSheet.create({
   container: {
@@ -24,7 +20,7 @@ export const defaultStyles = StyleSheet.create({
 
   header: {
     marginBottom: 33,
-    
+
     fontSize: 30,
     lineHeight: 35,
     textAlign: "center",
@@ -38,7 +34,7 @@ export const defaultStyles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 16,
     borderRadius: 8,
-    
+
     fontSize: 16,
     lineHeight: 19,
   },
@@ -48,13 +44,12 @@ export const defaultStyles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: "#E8E8E8",
     marginBottom: 16,
-    
+
     fontSize: 16,
     lineHeight: 19,
   },
 
   greyText: {
-    
     fontSize: 16,
     lineHeight: 19,
     color: "#BDBDBD",
@@ -72,7 +67,6 @@ export const defaultStyles = StyleSheet.create({
   },
 
   buttonText: {
-    
     fontSize: 16,
     lineHeight: 19,
     color: "#ffffff",
@@ -84,7 +78,6 @@ export const defaultStyles = StyleSheet.create({
   },
 
   isExistAccountText: {
-    
     fontSize: 16,
     lineHeight: 19,
     color: "#1B4371",
@@ -97,7 +90,6 @@ export const defaultStyles = StyleSheet.create({
   },
 
   showPassAreaText: {
-    
     fontSize: 16,
     lineHeight: 19,
     color: "#1B4371",
@@ -112,7 +104,7 @@ export const defaultStyles = StyleSheet.create({
     padding: 16,
     borderWidth: 1,
     borderRadius: 8,
-    
+
     fontSize: 16,
     lineHeight: 19,
   },
@@ -121,7 +113,7 @@ export const defaultStyles = StyleSheet.create({
     height: 40,
     borderWidth: 0,
     borderRadius: 0,
-    
+
     fontSize: 16,
   },
 });
