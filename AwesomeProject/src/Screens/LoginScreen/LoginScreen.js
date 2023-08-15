@@ -4,6 +4,7 @@ import {
   Text,
   TextInput,
   StyleSheet,
+  TouchableOpacity,
 } from "react-native";
 import {
     formwrapForKeyboard,
@@ -56,18 +57,18 @@ const LoginScreen = () => {
                   </View>
                 </View>
 
-                {!isOpenKeyboard ? (<View
+                {!isOpenKeyboard ? (<TouchableOpacity
                   style={defaultStyles.button}
                 
                 >
                   <Text style={defaultStyles.buttonText}> Увійти </Text>
-                </View>) : (<View><TextInput
+                </TouchableOpacity>) : (<View><TextInput
             placeholder="Покажи кнопку"
             style={[defaultStyles.inputHidden]}
             placeholderTextColor={"#ffffff"}
             onFocus={() => setIsOpenKeyboard(false)} /></View>)}
                 
-              {!isOpenKeyboard &&(<View
+              {!isOpenKeyboard &&(<TouchableOpacity
                   style={defaultStyles.isExistAccount}
                 
                 >
@@ -78,7 +79,7 @@ const LoginScreen = () => {
                       Зареєструватися
                     </Text>
                   </Text>
-                </View>)}
+                </TouchableOpacity>)}
               </View>
             
            </View>
