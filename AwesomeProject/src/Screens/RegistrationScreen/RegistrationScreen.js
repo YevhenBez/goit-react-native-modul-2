@@ -4,7 +4,10 @@ import {
   View,
   Text,
   TextInput,
+  TouchableOpacity,
 } from "react-native";
+
+import { useNavigation } from "@react-navigation/native";
 
 import {
   formwrapForKeyboard,
@@ -19,6 +22,8 @@ const RegistrationScreen = () => {
   const [isOpenKeyboard, setIsOpenKeyboard] = useState(false);
 
   const [isOpenKeyboardForFormwrap, setIsOpenKeyboardForFormwrap] = useState(formwrapWithoutKeyboard);
+
+  const navigation = useNavigation();
 
     return (
       
@@ -64,19 +69,20 @@ const RegistrationScreen = () => {
                     </View>
                 </View>
                 
-          {!isOpenKeyboard ? (<View style={defaultStyles.button}>
+          {!isOpenKeyboard ? (<TouchableOpacity style={defaultStyles.button}>
             <Text style={defaultStyles.buttonText}> Зареєстуватися </Text>
-          </View>) : (<View><TextInput
+          </TouchableOpacity>) : (<View><TextInput
             placeholder="Покажи кнопку"
             style={[defaultStyles.inputHidden]}
             placeholderTextColor={"#ffffff"}
             onFocus={() => setIsOpenKeyboard(false)} /></View>)}
                 
-                  {!isOpenKeyboard &&(<View style={defaultStyles.isExistAccount}>
+          {!isOpenKeyboard && (<TouchableOpacity style={defaultStyles.isExistAccount}
+                                  onPress={() => {navigation.navigate("LoginScreen"); }} >
                     <Text style={defaultStyles.isExistAccountText}>
                       Вже є акаунт? Увійти
                     </Text>
-                  </View>)}
+                  </TouchableOpacity>)}
                 
               </View>
           </View>
