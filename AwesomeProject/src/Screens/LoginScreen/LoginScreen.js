@@ -12,13 +12,17 @@ import {
   defaultStyles,
 } from "../../defaultStyles/defaultStyles";
 
+import { useNavigation } from "@react-navigation/native";
+
 const LoginScreen = () => {
 
     const [isShowPassword, setIsShowPassword] = useState(false);
     
     const [isOpenKeyboard, setIsOpenKeyboard] = useState(false);
 
-    const [isOpenKeyboardForFormwrap, setIsOpenKeyboardForFormwrap] = useState(formwrapWithoutKeyboard);
+  const [isOpenKeyboardForFormwrap, setIsOpenKeyboardForFormwrap] = useState(formwrapWithoutKeyboard);
+  
+  const navigation = useNavigation();
 
   return (
     
@@ -70,7 +74,9 @@ const LoginScreen = () => {
                 
               {!isOpenKeyboard &&(<TouchableOpacity
                   style={defaultStyles.isExistAccount}
-                
+                 onPress={() => {
+                    navigation.navigate("RegistrationScreen");
+                  }}
                 >
                   <Text style={defaultStyles.isExistAccountText}>
                     Немає акаунту?

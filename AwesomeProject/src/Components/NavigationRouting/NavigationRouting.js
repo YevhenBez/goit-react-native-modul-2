@@ -2,12 +2,21 @@ import RegistrationScreen from "../../Screens/RegistrationScreen/RegistrationScr
 
 import LoginScreen from "../../Screens/LoginScreen/LoginScreen";
 
+import { createStackNavigator } from "@react-navigation/stack";
+
+const AuthStack = createStackNavigator();
+
 export const NavigationRouting = () => {
     return (
-        
-      // <RegistrationScreen />
-      
-      <LoginScreen/>
-      
+        <AuthStack.Navigator initialRouteName="LoginScreen">
+        <AuthStack.Screen
+          name="RegistrationScreen"
+          component={RegistrationScreen}
+        />
+        <AuthStack.Screen
+          name="LoginScreen"
+          component={LoginScreen}
+        />
+        </AuthStack.Navigator>
      )
 }
